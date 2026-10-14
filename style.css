@@ -154,16 +154,18 @@ button {
 
 /* HERO */
 
+
 .hero {
     min-height: 690px;
-    padding: 90px 8% 70px;
+    padding: 100px 8% 85px;
     display: grid;
-    grid-template-columns: 1.05fr 0.95fr;
+    grid-template-columns: 1.1fr 0.9fr;
     align-items: center;
-    gap: 30px;
+    gap: 48px;
     position: relative;
     overflow: hidden;
 }
+
 
 .hero-content {
     position: relative;
@@ -188,16 +190,18 @@ button {
     box-shadow: 0 0 12px var(--lime);
 }
 
+
 .hero h1,
 .section-heading h2,
 .placeholder-section h2,
 .contact-section h2 {
     font-family: "Space Grotesk", sans-serif;
-    font-size: clamp(46px, 6vw, 78px);
+    font-size: clamp(46px, 5.8vw, 76px);
     font-weight: 600;
-    line-height: 1.02;
-    letter-spacing: -3px;
+    line-height: 1.06;
+    letter-spacing: -2.5px;
 }
+
 
 .gradient-text {
     color: var(--lime);
@@ -212,21 +216,25 @@ button {
     -webkit-text-stroke: 1px #a8a8b4;
 }
 
+
 .hero-description {
-    max-width: 440px;
-    margin-top: 27px;
+    max-width: 420px;
+    margin-top: 24px;
     color: var(--muted);
     font-size: 14px;
-    line-height: 1.9;
+    line-height: 1.85;
 }
+
+
 
 .hero-actions {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap: 22px;
-    margin-top: 32px;
+    gap: 24px;
+    margin-top: 30px;
 }
+
 
 .primary-btn {
     display: inline-flex;
@@ -1719,3 +1727,53 @@ button {
         font-size: 9px;
     }
 }
+
+
+/* Hero layout refinement */
+.hero {
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+    gap: 40px;
+}
+
+.hero-content {
+    min-width: 0;
+}
+
+.hero-visual {
+    min-width: 0;
+    width: 100%;
+}
+
+/* Responsive layout */
+@media (max-width: 900px) {
+    .hero {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 80px 6% 60px;
+    }
+
+    .hero-visual {
+        min-height: 320px;
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 65px 5% 45px;
+    }
+
+    .hero h1 {
+        font-size: clamp(38px, 10vw, 48px);
+        letter-spacing: -1.5px;
+    }
+
+    .hero-actions {
+        gap: 16px;
+    }
+
+    .hero-visual {
+        min-height: 270px;
+    }
+}
+
